@@ -88,8 +88,7 @@ const SideNav = () => {
       w="25rem"
       bgColor={"white"}
       h={"max-content"}
-      // position={"fixed"}
-      left={0}
+     
       float="left"
       display="flex"
       flexDir="column"
@@ -98,7 +97,6 @@ const SideNav = () => {
       pr="3.5rem"
       pb="9.3rem"
       fontFamily={"poppins"}
-      border="1px solid"
     >
       <Box pb={"1.3rem"} display={"flex"} alignItems="center" gap="1.05rem">
         <Avatar
