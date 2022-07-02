@@ -1,5 +1,11 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Avatar, Link, Input, Button } from "@chakra-ui/react";
 import Head from "next/head";
+import Image from "next/image";
+import notificationbell from "../public/dashboard/notification.svg";
+import avatar from "../public/dashboard/avatar.svg";
+import searchIcon from "../public/dashboard/search.png";
+import transaction from "../public/dashboard/transactions.svg";
+import amount from "../public/dashboard/amount.svg";
 
 export default function Home() {
   return (
@@ -13,12 +19,202 @@ export default function Home() {
         borderRadius="2rem"
         mt="2rem"
         mb="4.8rem"
+        mr="5rem"
         pl="3.8rem"
         pt="2.5rem"
+        pr="4.8rem"
+        pb="6.3rem"
         float="right"
-        width={"calc(100% - 25rem)"}
+        width={"calc(100% - 30rem)"}
+        fontFamily="poppins"
       >
-        <Text>Dashboard</Text>
+        <Box
+          display={"flex"}
+          justifyContent="space-between"
+          alignItems={"center"}
+          pb="2.25rem"
+        >
+          <Text fontWeight={700} fontSize="1.5rem" color="nairablue">
+            Dashboard
+          </Text>
+          <Box display={"flex"} alignItems="center" gap="1.6rem">
+            <Box as={Link} cursor="pointer">
+              <Image src={notificationbell} alt="notification bell" />
+            </Box>
+            <Avatar
+              name="Muhammed Cynthia"
+              src={avatar.src}
+              bg="rgba(30, 215, 96, 0.19)"
+            />
+          </Box>
+        </Box>
+        <form action="">
+          <Box
+            display={"flex"}
+            w={"16.7rem"}
+            h="2.5rem"
+            borderRadius={"5px"}
+            bgColor={"white"}
+          >
+            <Input
+              type="text"
+              placeholder="Search"
+              h="100%"
+              focusBorderColor="none"
+              border={"none"}
+              _placeholder={{ color: "#A7A7A7" }}
+            />
+            <Button
+              float={"right"}
+              type="submit"
+              bgColor={"nairagreen"}
+              w="3rem"
+              h="inherit"
+              _hover={{}}
+            >
+              <Image src={searchIcon} alt="search icon" />
+            </Button>
+          </Box>
+        </form>
+        <Box
+          pt="2.2rem"
+          pb="3.8rem"
+          display={"flex"}
+          alignItems="center"
+          justifyContent={"space-between"}
+        >
+          <Box
+            bgColor={"white"}
+            borderRadius="20px"
+            display={"flex"}
+            alignItems="center"
+            pl="1.25rem"
+            gap="1.25rem"
+            w="45%"
+            py="2.5rem"
+            boxShadow={"md"}
+          >
+            <Box>
+              <Image src={transaction} alt="total transactions" />
+            </Box>
+            <Box display={"flex"} flexDir="column">
+              <Text fontSize={"xl"} fontWeight={500} color={"nairagrey"}>
+                Total Transactions
+              </Text>
+              <Text color="nairablue" fontWeight={700} fontSize="2.75rem">
+                17
+              </Text>
+            </Box>
+          </Box>
+          <Box
+            bgColor={"white"}
+            borderRadius="20px"
+            display={"flex"}
+            alignItems="center"
+            pl="1.2rem"
+            gap="1.25rem"
+            w="47%"
+            py="2.5rem"
+            pr="2rem"
+            boxShadow={"md"}
+          >
+            <Box>
+              <Image src={amount} alt="total transactions" />
+            </Box>
+            <Box display={"flex"} flexDir="column">
+              <Text fontSize={"xl"} fontWeight={500} color={"nairagrey"}>
+                Total Amount Paid
+              </Text>
+              <Text color="nairablue" fontWeight={700} fontSize="2.75rem">
+                &#x20A6;590,000
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+        <Box display={"flex"} w="90%" flexDir="column" gap="2.75rem">
+          <Text color="nairablue" fontWeight={700} fontSize="1.5rem">
+            Cashback Payment History
+          </Text>
+          <Box display={"flex"} justifyContent="space-between">
+            <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+              S/N
+            </Text>
+            <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+              Timestamp
+            </Text>
+            <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+              Timestamp Date
+            </Text>
+          </Box>
+          <Box display={"flex"} flexDir="column" gap="2rem">
+            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                1
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                14:20:34
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                24, Apr 2021
+              </Text>
+            </Box>
+            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                2
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                14:20:34
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                24, Apr 2021
+              </Text>
+            </Box>
+            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                3
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                14:20:34
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                24, Apr 2021
+              </Text>
+            </Box>
+            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                4
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                14:20:34
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                24, Apr 2021
+              </Text>
+            </Box>
+            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                5
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                14:20:34
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                24, Apr 2021
+              </Text>
+            </Box>
+            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                6
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                14:20:34
+              </Text>
+              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+                24, Apr 2021
+              </Text>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
