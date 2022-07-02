@@ -88,7 +88,6 @@ const SideNav = () => {
       w="25rem"
       bgColor={"white"}
       h={"max-content"}
-     
       float="left"
       display="flex"
       flexDir="column"

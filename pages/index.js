@@ -19,10 +19,10 @@ export default function Home() {
         borderRadius="2rem"
         mt="2rem"
         mb="4.8rem"
-        mr="5rem"
+        mr="4.5rem"
         pl="3.8rem"
         pt="2.5rem"
-        pr="4.8rem"
+        pr="4.5rem"
         pb="6.3rem"
         float="right"
         width={"calc(100% - 30rem)"}
@@ -90,9 +90,9 @@ export default function Home() {
             alignItems="center"
             pl="1.25rem"
             gap="1.25rem"
-            w="45%"
-            py="2.5rem"
-            boxShadow={"md"}
+            w="47%"
+            py="2rem"
+            boxShadow={"sm"}
           >
             <Box>
               <Image src={transaction} alt="total transactions" />
@@ -114,9 +114,9 @@ export default function Home() {
             pl="1.2rem"
             gap="1.25rem"
             w="47%"
-            py="2.5rem"
+            py="2rem"
             pr="2rem"
-            boxShadow={"md"}
+            boxShadow={"sm"}
           >
             <Box>
               <Image src={amount} alt="total transactions" />

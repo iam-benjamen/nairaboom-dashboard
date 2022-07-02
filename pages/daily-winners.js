@@ -43,7 +43,7 @@ const DailyWinners = () => {
               fontSize={".9rem"}
               color="#9E9E9E"
               pl=".4rem"
-              _hover={{ color: "nairablue" }}
+              _hover={{color: "nairablue" }}
               textDecoration="none"
             >
               Back
@@ -177,7 +177,7 @@ const DailyWinners = () => {
             display={"flex"}
             flexDir="column"
             gap="1.4rem"
-            mb={{ base: "4rem", md: "7.6rem" }}
+            mb="4.2rem"
           >
             {numbers.map((number, index) => (
               <Box
@@ -220,22 +220,22 @@ const DailyWinners = () => {
             ))}
           </Box>{" "}
           <Box
-            mb={{ base: "3rem", md: "5.375rem" }}
+         
             display={"flex"}
-            justifyContent="space-evenly"
-            maxW={"90%"}
+            justifyContent="space-around"
+            
             flexDir={{ base: "column", md: "row" }}
-            gap={{ base: "1rem", md: "0" }}
+            gap="3rem"
           >
-            <Text fontSize={"14px"} color="#A7A7A7">
+            <Text fontSize={"11px"} color="#A7A7A7">
               Showing 1 - 10 of 1,200
             </Text>
             <Box flexWrap={"wrap"} display={"flex"} gap="11px" maxW={"inherit"}>
               <Square
                 color="white"
-                size={"2.1rem"}
+                size={"1.4rem"}
                 bgColor={"nairablue"}
-                fontSize={"14px"}
+                fontSize={"10px"}
                 borderRadius={"5px"}
               >
                 1
@@ -243,8 +243,8 @@ const DailyWinners = () => {
               <Square
                 color="nairablue"
                 border="1px solid"
-                size={"2.1rem"}
-                fontSize={"14px"}
+                size={"1.4rem"}
+                fontSize={"10px"}
                 borderRadius={"5px"}
               >
                 2
@@ -252,8 +252,8 @@ const DailyWinners = () => {
               <Square
                 color="nairablue"
                 border="1px solid"
-                size={"2.1rem"}
-                fontSize={"14px"}
+                size={"1.4rem"}
+                fontSize={"10px"}
                 borderRadius={"5px"}
               >
                 3
@@ -261,8 +261,8 @@ const DailyWinners = () => {
               <Square
                 color="nairablue"
                 border="1px solid"
-                size={"2.1rem"}
-                fontSize={"14px"}
+                size={"1.4rem"}
+                fontSize={"10px"}
                 borderRadius={"5px"}
               >
                 ...
@@ -270,8 +270,8 @@ const DailyWinners = () => {
               <Square
                 color="nairablue"
                 border="1px solid"
-                size={"2.1rem"}
-                fontSize={"14px"}
+                size={"1.4rem"}
+                fontSize={"10px"}
                 borderRadius={"5px"}
               >
                 22
@@ -279,8 +279,9 @@ const DailyWinners = () => {
               <Square
                 color="nairablue"
                 border="1px solid"
-                w={"3rem"}
-                fontSize={"14px"}
+                w={"1.8rem"}
+                h="1.4rem"
+                fontSize={"10px"}
                 borderRadius={"5px"}
               >
                 Next
