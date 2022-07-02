@@ -4,7 +4,7 @@ import { Box, Link, Text } from "@chakra-ui/react";
 
 const ActiveLink = (props) => {
   return (
-    <NextLink href={props.href} passHref key={props.key}>
+    <NextLink href={props.href} passHref>
       <Box
         borderRadius={"8px"}
         as={Link}
