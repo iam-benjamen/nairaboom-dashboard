@@ -36,7 +36,7 @@ const SideNav = () => {
       "/cashback",
       `${blackcashback.src}`,
       `${greycashback.src}`,
-      "26px",
+      "27px",
       "27px",
     ],
     [
@@ -49,7 +49,7 @@ const SideNav = () => {
     ],
     [
       "My Wallet",
-      "/winning",
+      "/wallet",
       `${blackwallet.src}`,
       `${greywallet.src}`,
       "19px",
@@ -68,7 +68,7 @@ const SideNav = () => {
   const DashboardLink2 = [
     [
       "Edit Profile",
-      "/winning",
+      "/editprofile",
       `${blackedit.src}`,
       `${greyedit.src}`,
       "16px",
@@ -88,7 +88,6 @@ const SideNav = () => {
       w="25rem"
       bgColor={"white"}
       h={"max-content"}
-     
       float="left"
       display="flex"
       flexDir="column"

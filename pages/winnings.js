@@ -130,7 +130,7 @@ const Winnings = () => {
         <Text color="nairablue" fontWeight={700} fontSize="1.5rem">
           My Winning History
         </Text>
-        <Box display={"flex"} justifyContent="space-between">
+        <Box display={"flex"} justifyContent="space-between" px="1rem">
           <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
             S/N
           </Text>

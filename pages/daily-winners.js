@@ -223,7 +223,8 @@ const DailyWinners = () => {
             mb={{ base: "3rem", md: "5.375rem" }}
             display={"flex"}
             justifyContent="space-evenly"
-            maxW={"90%"}
+            alignItems={"center"}
+            
             flexDir={{ base: "column", md: "row" }}
             gap={{ base: "1rem", md: "0" }}
           >

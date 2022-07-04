@@ -1,4 +1,12 @@
-import { Box, Text, Avatar, Link, Input, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Avatar,
+  Link,
+  Input,
+  Button,
+  chakra,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
 import notificationbell from "../public/dashboard/notification.svg";
@@ -6,6 +14,7 @@ import avatar from "../public/dashboard/avatar.svg";
 import searchIcon from "../public/dashboard/search.png";
 import transaction from "../public/dashboard/transactions.svg";
 import amount from "../public/dashboard/amount.svg";
+import nairasign from "../public/dashboard/Nairasign.svg";
 
 export default function Home() {
   return (
@@ -90,9 +99,9 @@ export default function Home() {
             alignItems="center"
             pl="1.25rem"
             gap="1.25rem"
-            w="45%"
+            w="48%"
             py="2.5rem"
-            boxShadow={"md"}
+            boxShadow={"base"}
           >
             <Box>
               <Image src={transaction} alt="total transactions" />
@@ -113,10 +122,10 @@ export default function Home() {
             alignItems="center"
             pl="1.2rem"
             gap="1.25rem"
-            w="47%"
+            w="48%"
             py="2.5rem"
             pr="2rem"
-            boxShadow={"md"}
+            boxShadow={"base"}
           >
             <Box>
               <Image src={amount} alt="total transactions" />
@@ -126,87 +135,120 @@ export default function Home() {
                 Total Amount Paid
               </Text>
               <Text color="nairablue" fontWeight={700} fontSize="2.75rem">
-                &#x20A6;590,000
+                <chakra.span>
+                  <Image src={nairasign} alt="nairasign" />
+                </chakra.span>
+                5900
               </Text>
             </Box>
           </Box>
         </Box>
-        <Box display={"flex"} w="90%" flexDir="column" gap="2.75rem">
+        <Box display={"flex"} w="90%" flexDir="column">
           <Text color="nairablue" fontWeight={700} fontSize="1.5rem">
             Cashback Payment History
           </Text>
-          <Box display={"flex"} justifyContent="space-between">
-            <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+          <Box pt="2.75rem" display={"flex"} justifyContent="space-between">
+            <Text color="nairagrey" fontWeight={500} fontSize="1.25rem">
               S/N
             </Text>
-            <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+            <Text color="nairagrey" fontWeight={500} fontSize="1.25rem">
               Timestamp
             </Text>
-            <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+            <Text color="nairagrey" fontWeight={500} fontSize="1.25rem">
               Timestamp Date
             </Text>
           </Box>
-          <Box display={"flex"} flexDir="column" gap="2rem">
-            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+          <Box pt="2.4rem" display={"flex"} flexDir="column" gap="2rem">
+            <Box
+              display={"flex"}
+              justifyContent="space-between"
+              pl="1.5rem"
+              pr="1.5rem"
+            >
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 1
               </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
                 14:20:34
               </Text>
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 24, Apr 2021
               </Text>
             </Box>
-            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+            <Box
+              display={"flex"}
+              justifyContent="space-between"
+              pl="1.5rem"
+              pr="1.5rem"
+            >
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 2
               </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
                 14:20:34
               </Text>
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 24, Apr 2021
               </Text>
             </Box>
-            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+            <Box
+              display={"flex"}
+              justifyContent="space-between"
+              pl="1.5rem"
+              pr="1.5rem"
+            >
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 3
               </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
                 14:20:34
               </Text>
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 24, Apr 2021
               </Text>
             </Box>
-            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+            <Box
+              display={"flex"}
+              justifyContent="space-between"
+              pl="1.5rem"
+              pr="1.5rem"
+            >
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 4
               </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
                 14:20:34
               </Text>
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 24, Apr 2021
               </Text>
             </Box>
-            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+            <Box
+              display={"flex"}
+              justifyContent="space-between"
+              pl="1.5rem"
+              pr="1.5rem"
+            >
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 5
               </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
                 14:20:34
               </Text>
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 24, Apr 2021
               </Text>
             </Box>
-            <Box display={"flex"} justifyContent="space-between" pl="1.5rem" pr="3.5rem">
+            <Box
+              display={"flex"}
+              justifyContent="space-between"
+              pl="1.5rem"
+              pr="1.5rem"
+            >
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
                 6
               </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
                 14:20:34
               </Text>
               <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
