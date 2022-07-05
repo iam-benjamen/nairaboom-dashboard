@@ -1,16 +1,24 @@
 import {
   Box,
-  Link,
   Text,
   Avatar,
   Input,
-  Divider,
   Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
 } from "@chakra-ui/react";
 import avatar from "../public/edit-profile/avatar.png";
-import Image from "next/image";
+import { useDisclosure } from "@chakra-ui/react";
+import ModalClose from "../components/ModalClose";
 
 const EditProfile = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box
       pl="3.8rem"
@@ -116,17 +124,50 @@ const EditProfile = () => {
             </Text>
           </Box>
         </Box>
+        <Button
+          color="white"
+          bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
+          mt="6.825rem"
+          w="26.8rem"
+          h="3rem"
+          alignSelf={"flex-start"}
+          onClick={onOpen}
+        >
+          Edit Profile
+        </Button>
+        <Modal isOpen={isOpen} onClose={onClose} size="xl">
+          <ModalOverlay />
+          <ModalContent pt="3.37rem" pb="3.8rem">
+            <ModalCloseButton mt="3.37rem" colorScheme={"red"} />
+            <ModalBody>
+              <Box
+                display={"flex"}
+                flexDir="column"
+                alignItems={"center"}
+                justifyContent="center"
+                fontFamily={"poppins"}
+              >
+                <Text pb="4rem" fontWeight={700} fontSize="1.5rem">
+                  Edit Profile
+                </Text>
+                <form action="">
+                  <Box gap="2.3rem" display={"flex"} flexDir="column">
+                    <Box>
+                      <label htmlFor="name">Full Name</label>
+                      <Input type="text" placeholder="Muhammed Cynthia" />
+                    </Box>
+                    <Box>
+                      <label htmlFor="name">Phone Number</label>
+                      <Input type="text" placeholder="+234-8094647438" />
+                    </Box>
+                    <Button type="submit">Update</Button>
+                  </Box>
+                </form>
+              </Box>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
       </Box>
-      <Button
-        color="white"
-        bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
-        margin={"auto"}
-        mt="6.825rem"
-        w="50%"
-        h="3rem"
-      >
-        Edit Profile
-      </Button>
     </Box>
   );
 };
