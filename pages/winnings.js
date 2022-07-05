@@ -111,8 +111,8 @@ const Winnings = () => {
               bgColor="nairagreen"
               color="white"
               borderRadius="md"
-              transitionDuration={".3s"}
-              _hover={{ transform: "scale(1.02)" }}
+              transition={"all ease-in-out .4s"}
+              _hover={{color:"nairagreen", bg:"white", border:"1px solid", borderColor:"nairagreen"}}
               textAlign="center"
               py={"1rem"}
               w="11rem"

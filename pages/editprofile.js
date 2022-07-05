@@ -138,7 +138,7 @@ const EditProfile = () => {
         <Modal isOpen={isOpen} onClose={onClose} size="xl">
           <ModalOverlay />
           <ModalContent pt="3.37rem" pb="3.8rem">
-            <ModalCloseButton mt="3.37rem" colorScheme={"red"} />
+            <ModalCloseButton mt="3.37rem" mr="3.5rem" colorScheme={"red"} />
             <ModalBody>
               <Box
                 display={"flex"}
@@ -151,17 +151,60 @@ const EditProfile = () => {
                   Edit Profile
                 </Text>
                 <form action="">
-                  <Box gap="2.3rem" display={"flex"} flexDir="column">
-                    <Box>
-                      <label htmlFor="name">Full Name</label>
-                      <Input type="text" placeholder="Muhammed Cynthia" />
+                  <Box
+                    alignItems={"center"}
+                    w="21rem"
+                    gap="2.3rem"
+                    display={"flex"}
+                    flexDir="column"
+                    margin={"auto"}
+                  >
+                    <Box w="100%">
+                      <label htmlFor="name">
+                        <Text
+                          color="nairagrey"
+                          fontWeight={500}
+                          fontSize=".9rem"
+                        >
+                          Full Name
+                        </Text>{" "}
+                      </label>
+                      <Input
+                        _placeholder={{
+                          fontSize: "13px",
+                          fontWeight: 500,
+                          color: "niaragrey",
+                        }}
+                        h="4rem"
+                        border={"none"}
+                        bgColor={"#F5F5F5"}
+                        type="text"
+                        placeholder="Muhammed Cynthia"
+                      />
                     </Box>
-                    <Box>
-                      <label htmlFor="name">Phone Number</label>
-                      <Input type="text" placeholder="+234-8094647438" />
+                    <Box w="100%">
+                      <label htmlFor="name">
+                        <Text
+                          color="nairagrey"
+                          fontWeight={500}
+                          fontSize=".9rem"
+                        >
+                          Phone Number
+                        </Text>{" "}
+                      </label>
+                      <Input
+                        _placeholder={{ fontSize: "13px", fontWeight: 500 }}
+                        h="4rem"
+                        border="none"
+                        bgColor={"#F5F5F5"}
+                        type="text"
+                        placeholder="+234-8094647438"
+                      />
                     </Box>
-                    <Button type="submit">Update</Button>
                   </Box>
+                  <Button w="25rem" type="submit" mt="4rem">
+                    Update
+                  </Button>
                 </form>
               </Box>
             </ModalBody>
