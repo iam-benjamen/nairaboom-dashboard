@@ -91,6 +91,7 @@ export default function Home() {
           display={"flex"}
           alignItems="center"
           justifyContent={"space-between"}
+          gap="1rem"
         >
           <Box
             bgColor={"white"}
@@ -99,7 +100,8 @@ export default function Home() {
             alignItems="center"
             pl="1.25rem"
             gap="1.25rem"
-            w="48%"
+            w="max-content"
+            pr="3rem"
             py="2.5rem"
             boxShadow={"base"}
           >
@@ -122,9 +124,9 @@ export default function Home() {
             alignItems="center"
             pl="1.2rem"
             gap="1.25rem"
-            w="48%"
+            w="max-content"
             py="2.5rem"
-            pr="2rem"
+            pr="3rem"
             boxShadow={"base"}
           >
             <Box>

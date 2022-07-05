@@ -76,7 +76,7 @@ const SideNav = () => {
     ],
     [
       "Change Password",
-      "/winning",
+      "/change-password",
       `${blackchange.src}`,
       `${greychange.src}`,
       "19px",

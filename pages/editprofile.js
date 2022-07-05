@@ -30,6 +30,7 @@ const EditProfile = () => {
       borderRadius="2rem"
       mt="2rem"
       pb="4rem"
+      mr="5rem"
     >
       <Text fontWeight={700} fontSize="1.5rem" pb="6rem">
         Edit Profile
@@ -132,12 +133,14 @@ const EditProfile = () => {
           h="3rem"
           alignSelf={"flex-start"}
           onClick={onOpen}
+          focusBorderColor="nairagreen"
+          _hover={{}}
         >
           Edit Profile
         </Button>
         <Modal isOpen={isOpen} onClose={onClose} size="xl">
           <ModalOverlay />
-          <ModalContent pt="3.37rem" pb="3.8rem">
+          <ModalContent pt="3.37rem" pb="3.8rem" h="max-content" w="60%">
             <ModalCloseButton mt="3.37rem" mr="3.5rem" colorScheme={"red"} />
             <ModalBody>
               <Box
@@ -147,7 +150,13 @@ const EditProfile = () => {
                 justifyContent="center"
                 fontFamily={"poppins"}
               >
-                <Text pb="4rem" fontWeight={700} fontSize="1.5rem">
+                <Text
+                  alignSelf={"flex-start"}
+                  ml="6rem"
+                  pb="4rem"
+                  fontWeight={700}
+                  fontSize="1.5rem"
+                >
                   Edit Profile
                 </Text>
                 <form action="">
@@ -180,6 +189,7 @@ const EditProfile = () => {
                         bgColor={"#F5F5F5"}
                         type="text"
                         placeholder="Muhammed Cynthia"
+                        focusBorderColor="nairagreen"
                       />
                     </Box>
                     <Box w="100%">
@@ -197,12 +207,22 @@ const EditProfile = () => {
                         h="4rem"
                         border="none"
                         bgColor={"#F5F5F5"}
-                        type="text"
+                        type="number"
                         placeholder="+234-8094647438"
+                        focusBorderColor="nairagreen"
                       />
                     </Box>
                   </Box>
-                  <Button w="25rem" type="submit" mt="4rem">
+                  <Button
+                    color="white"
+                    bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
+                    w="25rem"
+                    // maxW={"80%"}
+                    // float="right"
+                    type="submit"
+                    mt="4rem"
+                    _hover={{}}
+                  >
                     Update
                   </Button>
                 </form>
