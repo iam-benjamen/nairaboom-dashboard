@@ -138,9 +138,20 @@ const EditProfile = () => {
         >
           Edit Profile
         </Button>
-        <Modal isOpen={isOpen} onClose={onClose} size="xl">
+        <Modal
+          motionPreset="slideInBottom"
+          isOpen={isOpen}
+          onClose={onClose}
+          size="xl"
+        >
           <ModalOverlay />
-          <ModalContent pt="3.37rem" pb="3.8rem" h="max-content" w="60%">
+          <ModalContent
+            borderRadius={"1.8rem"}
+            pt="3.37rem"
+            pb="3.8rem"
+            h="max-content"
+            w="60%"
+          >
             <ModalCloseButton mt="3.37rem" mr="3.5rem" colorScheme={"red"} />
             <ModalBody>
               <Box

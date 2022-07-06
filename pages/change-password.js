@@ -117,6 +117,7 @@ const ChangePassword = () => {
             bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
             py=".5rem"
             mt="5rem"
+            _hover={{}}
           >
             Update
           </Button>
