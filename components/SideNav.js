@@ -91,9 +91,9 @@ const SideNav = () => {
       float="left"
       display="flex"
       flexDir="column"
-      pl="3.9rem"
+      pl="3rem"
+      pr="2.5rem"
       pt="2.5rem"
-      pr="3.5rem"
       pb="9.3rem"
       fontFamily={"poppins"}
     >

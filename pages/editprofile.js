@@ -7,14 +7,11 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
 import avatar from "../public/edit-profile/avatar.png";
 import { useDisclosure } from "@chakra-ui/react";
-import ModalClose from "../components/ModalClose";
 
 const EditProfile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,7 +27,7 @@ const EditProfile = () => {
       borderRadius="2rem"
       mt="2rem"
       pb="4rem"
-      mr="5rem"
+      mr="4rem"
     >
       <Text fontWeight={700} fontSize="1.5rem" pb="6rem">
         Edit Profile

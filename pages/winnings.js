@@ -6,6 +6,7 @@ import searchIcon from "../public/dashboard/search.png";
 import transaction from "../public/dashboard/transactions.svg";
 import amount from "../public/dashboard/amount.svg";
 import NextLink from "next/link";
+import winning from "../public/winning/winning-icon.png";
 
 const Winnings = () => {
   return (
@@ -14,7 +15,7 @@ const Winnings = () => {
       borderRadius="2rem"
       mt="2rem"
       mb="4.8rem"
-      mr="5rem"
+      mr="4rem"
       pl="3.8rem"
       pt="2.5rem"
       pr="4.8rem"
@@ -91,9 +92,9 @@ const Winnings = () => {
           pr="2.68rem"
           boxShadow={"md"}
         >
-          <Box>
+          <Box display={"flex"} gap={"1.375rem"}>
             <Box>
-              <Image src={transaction} alt="total transactions" />
+              <Image src={winning} alt="total transactions" />
             </Box>
             <Box display={"flex"} flexDir="column">
               <Text fontSize={"xl"} fontWeight={500} color={"nairagrey"}>
@@ -112,7 +113,12 @@ const Winnings = () => {
               color="white"
               borderRadius="md"
               transition={"all ease-in-out .4s"}
-              _hover={{color:"nairagreen", bg:"white", border:"1px solid", borderColor:"nairagreen"}}
+              _hover={{
+                color: "nairagreen",
+                bg: "white",
+                border: "1px solid",
+                borderColor: "nairagreen",
+              }}
               textAlign="center"
               py={"1rem"}
               w="11rem"

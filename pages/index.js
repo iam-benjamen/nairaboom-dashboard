@@ -28,7 +28,7 @@ export default function Home() {
         borderRadius="2rem"
         mt="2rem"
         mb="4.8rem"
-        mr="5rem"
+        mr="4rem"
         pl="3.8rem"
         pt="2.5rem"
         pr="4.8rem"
@@ -95,7 +95,7 @@ export default function Home() {
         >
           <Box
             bgColor={"white"}
-            borderRadius="20px"
+            borderRadius="xl"
             display={"flex"}
             alignItems="center"
             pl="1.25rem"
