@@ -2,24 +2,11 @@ import { Box, Text, Avatar, Link, Input, Button } from "@chakra-ui/react";
 import notificationbell from "../public/dashboard/notification.svg";
 import avatar from "../public/dashboard/avatar.svg";
 import Image from "next/image";
+import Wrapper from "../components/Wrapper";
 
 const ChangePassword = () => {
   return (
-    <Box
-      bgColor={"#F5F5F5"}
-      borderRadius="2rem"
-      mt="2rem"
-      mb="4.8rem"
-      mr="4rem"
-      pl="3.8rem"
-      pt="2.5rem"
-      pr="4.8rem"
-      pb="6.3rem"
-      float="right"
-      width={"calc(100% - 30rem)"}
-      fontFamily="poppins"
-      display={"flex"}
-      flexDir="column"
+    <Wrapper
     >
       <Box
         display={"flex"}
@@ -123,7 +110,7 @@ const ChangePassword = () => {
           </Button>
         </Box>
       </form>
-    </Box>
+    </Wrapper>
   );
 };
 

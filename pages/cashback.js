@@ -10,22 +10,11 @@ import {
 import Image from "next/image";
 import avatar from "../public/dashboard/avatar.svg";
 import notificationbell from "../public/dashboard/notification.svg";
+import Wrapper from "../components/Wrapper";
 
 const CashBack = () => {
   return (
-    <Box
-      bgColor={"#F5F5F5"}
-      borderRadius="2rem"
-      mt="2rem"
-      mb="4.8rem"
-      mr="4rem"
-      pl="3.8rem"
-      pt="2.5rem"
-      pr="4.8rem"
-      pb="6.3rem"
-      float="right"
-      width={"calc(100% - 30rem)"}
-      fontFamily="poppins"
+    <Wrapper
     >
       <Box
         display={"flex"}
@@ -170,7 +159,7 @@ const CashBack = () => {
           </Box>
         </form>
       </Box>
-    </Box>
+    </Wrapper>
   );
 };
 

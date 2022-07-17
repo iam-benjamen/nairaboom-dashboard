@@ -12,22 +12,13 @@ import {
 } from "@chakra-ui/react";
 import avatar from "../public/edit-profile/avatar.png";
 import { useDisclosure } from "@chakra-ui/react";
+import Wrapper from "../components/Wrapper";
 
 const EditProfile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box
-      pl="3.8rem"
-      pt="2.5rem"
-      float="right"
-      width={"calc(100% - 30rem)"}
-      fontFamily="poppins"
-      bgColor={"#F5F5F5"}
-      borderRadius="2rem"
-      mt="2rem"
-      pb="4rem"
-      mr="4rem"
+    <Wrapper
     >
       <Text fontWeight={700} fontSize="1.5rem" pb="6rem">
         Edit Profile
@@ -239,7 +230,7 @@ const EditProfile = () => {
           </ModalContent>
         </Modal>
       </Box>
-    </Box>
+    </Wrapper>
   );
 };
 

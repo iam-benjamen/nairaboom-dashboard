@@ -12,7 +12,7 @@ const colors = {
 const breakpoints = {
   sm: "320px",
   md: "768px",
-  lg: "1024px",
+  lg: "1050px",
 };
 
 const theme = extendTheme({ colors, breakpoints });

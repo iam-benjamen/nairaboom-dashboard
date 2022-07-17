@@ -15,23 +15,12 @@ import ArrowLeft from "../public/daily-winners/ArrowLeft.png";
 import confetti from "../public/daily-winners/confetti.png";
 import notificationbell from "../public/dashboard/notification.svg";
 import searchIcon from "../public/daily-winners/search.png";
+import Wrapper from "../components/Wrapper";
 
 const DailyWinners = () => {
   const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
   return (
-    <Box
-      bgColor={"#F5F5F5"}
-      borderRadius="2rem"
-      mt="2rem"
-      mb="4.8rem"
-      mr="4rem"
-      pl="3.8rem"
-      pt="2.5rem"
-      pr="4.8rem"
-      pb="6.3rem"
-      float="right"
-      width={"calc(100% - 30rem)"}
-      fontFamily="poppins"
+    <Wrapper
     >
       <Box display={"flex"} justifyContent="space-between" pb="2.25rem">
         <NextLink href={"/winnings"} passHref>
@@ -290,7 +279,7 @@ const DailyWinners = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </Wrapper>
   );
 };
 

@@ -20,7 +20,7 @@ import ActiveLink from "./ActiveLink";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 
-const SideNav = () => {
+const SideNavMobile = () => {
   const router = useRouter();
   const DashboardLink = [
     [
@@ -85,17 +85,18 @@ const SideNav = () => {
   ];
   return (
     <Box
-      w="25%"
+      w="100%"
       bgColor={"white"}
-      h={"max-content"}
-      float="left"
-      display={{base:"none", lg:"flex"}}
+      // h={"max-content"}
+      // float="left"
+      display={"flex"}
       flexDir="column"
       pl="3rem"
       pr=".5rem"
       pt="2.5rem"
       pb="9.3rem"
       fontFamily={"poppins"}
+      zIndex={999}
     >
       <Box pb={"1.3rem"} display={"flex"} alignItems="center" gap="1.05rem">
         <Avatar
@@ -182,4 +183,4 @@ const SideNav = () => {
   );
 };
 
-export default SideNav;
+export default SideNavMobile;

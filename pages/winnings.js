@@ -7,22 +7,11 @@ import transaction from "../public/dashboard/transactions.svg";
 import amount from "../public/dashboard/amount.svg";
 import NextLink from "next/link";
 import winning from "../public/winning/winning-icon.png";
+import Wrapper from "../components/Wrapper";
 
 const Winnings = () => {
   return (
-    <Box
-      bgColor={"#F5F5F5"}
-      borderRadius="2rem"
-      mt="2rem"
-      mb="4.8rem"
-      mr="4rem"
-      pl="3.8rem"
-      pt="2.5rem"
-      pr="4.8rem"
-      pb="6.3rem"
-      float="right"
-      width={"calc(100% - 30rem)"}
-      fontFamily="poppins"
+    <Wrapper
     >
       <Box
         display={"flex"}
@@ -246,7 +235,7 @@ const Winnings = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </Wrapper>
   );
 };
 

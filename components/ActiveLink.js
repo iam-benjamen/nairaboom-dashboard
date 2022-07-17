@@ -15,7 +15,7 @@ const ActiveLink = (props) => {
         justifyContent={"flex-start"}
         gap="1.18rem"
         py="1rem"
-        pl="2rem"
+        pl="1.5rem"
         pr="1rem"
         transitionDuration={".3s"}
         _hover={{ textDecoration: "none", bg: "currentlink" }}
