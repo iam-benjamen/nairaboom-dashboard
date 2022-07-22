@@ -49,6 +49,7 @@ export default function Home() {
           <Box
             display={"flex"}
             w={"16.7rem"}
+            maxW="90%"
             h="2.5rem"
             borderRadius={"5px"}
             bgColor={"white"}
@@ -75,10 +76,12 @@ export default function Home() {
         </form>
         <Box
           pt="2.2rem"
-          pb="3.8rem"
+          pb={{ base: "2rem", md: "3.8rem" }}
           display={"flex"}
+          flexDir={{ base: "column", md: "row" }}
           alignItems="center"
           justifyContent={"space-between"}
+          gap={{ base: "1rem", md: "0rem" }}
         >
           <Box
             bgColor={"white"}
@@ -86,20 +89,26 @@ export default function Home() {
             display={"flex"}
             alignItems="center"
             pl="1.25rem"
-            gap="1.25rem"
-            w="47%"
-            // pr="3rem"
-            py="2.5rem"
-            // boxShadow={"base"}
+            gap={{ base: "1rem", md: "1.25rem" }}
+            w={{ base: "100%", md: "47%" }}
+            py={{ base: "1.5rem", md: "2.5rem" }}
           >
             <Box>
               <Image src={transaction} alt="total transactions" />
             </Box>
             <Box display={"flex"} flexDir="column">
-              <Text fontSize={"xl"} fontWeight={500} color={"nairagrey"}>
+              <Text
+                fontSize={{ base: "1rem", md: "xl" }}
+                fontWeight={500}
+                color={"nairagrey"}
+              >
                 Total Transactions
               </Text>
-              <Text color="nairablue" fontWeight={700} fontSize="2.75rem">
+              <Text
+                color="nairablue"
+                fontWeight={700}
+                fontSize={{ base: "2rem", md: "2.75rem" }}
+              >
                 17
               </Text>
             </Box>
@@ -110,137 +119,101 @@ export default function Home() {
             display={"flex"}
             alignItems="center"
             pl="1.2rem"
-            gap="1.25rem"
-            w="47%"
-            py="2.5rem"
-            // pr="3rem"
-            // boxShadow={"base"}
+            gap={{ base: "1rem", md: "1.25rem" }}
+            w={{ base: "100%", md: "47%" }}
+            py={{ base: "1.5rem", md: "2.5rem" }}
           >
             <Box>
               <Image src={amount} alt="total transactions" />
             </Box>
             <Box display={"flex"} flexDir="column">
-              <Text fontSize={"xl"} fontWeight={500} color={"nairagrey"}>
+              <Text
+                fontSize={{ base: "1rem", md: "xl" }}
+                fontWeight={500}
+                color={"nairagrey"}
+              >
                 Total Amount Paid
               </Text>
-              <Text color="nairablue" fontWeight={700} fontSize="2.75rem">
-                <chakra.span>
-                  <Image src={nairasign} alt="nairasign" />
-                </chakra.span>
-                5900
+              <Text
+                color="nairablue"
+                fontWeight={700}
+                fontSize={{ base: "2rem", md: "2.75rem" }}
+              >
+                &#8358;5900
               </Text>
             </Box>
           </Box>
         </Box>
         <Box display={"flex"} w="90%" flexDir="column">
-          <Text color="nairablue" fontWeight={700} fontSize="1.5rem">
+          <Text
+            color="nairablue"
+            fontWeight={700}
+            fontSize={{ base: "1.25rem", md: "1.5rem" }}
+          >
             Cashback Payment History
           </Text>
-          <Box pt="2.75rem" display={"flex"} justifyContent="space-between">
-            <Text color="nairagrey" fontWeight={500} fontSize="1.25rem">
+          <Box
+            pt={{ base: "2rem", md: "2.75rem" }}
+            display={"flex"}
+            justifyContent="space-between"
+          >
+            <Text
+              color="nairagrey"
+              fontWeight={500}
+              fontSize={{ base: ".9rem", md: "1.25rem" }}
+            >
               S/N
             </Text>
-            <Text color="nairagrey" fontWeight={500} fontSize="1.25rem">
+            <Text
+              color="nairagrey"
+              fontWeight={500}
+              fontSize={{ base: ".9rem", md: "1.25rem" }}
+            >
               Timestamp
             </Text>
-            <Text color="nairagrey" fontWeight={500} fontSize="1.25rem">
+            <Text
+              color="nairagrey"
+              fontWeight={500}
+              fontSize={{ base: ".9rem", md: "1.25rem" }}
+            >
               Timestamp Date
             </Text>
           </Box>
-          <Box pt="2.4rem" display={"flex"} flexDir="column" gap="2rem">
+          <Box
+            pt={{ base: "1.5rem", md: "2.4rem" }}
+            display={"flex"}
+            flexDir="column"
+            gap="2rem"
+          >
             <Box
               display={"flex"}
               justifyContent="space-between"
-              pl="1.5rem"
-              pr="1.5rem"
+              pl={{ base: "0rem", md: "1.5rem" }}
+              pr={{ base: "0rem", md: "1.5rem" }}
             >
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text
+                fontSize={{ base: "1rem", md: "lg" }}
+                color="nairablue"
+                fontWeight={400}
+                textAlign="center"
+              >
                 1
               </Text>
-              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text
+                w="7rem"
+                fontSize={{ base: "1rem", md: "lg" }}
+                color="nairablue"
+                fontWeight={400}
+                textAlign="center"
+              >
                 14:20:34
               </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                24, Apr 2021
-              </Text>
-            </Box>
-            <Box
-              display={"flex"}
-              justifyContent="space-between"
-              pl="1.5rem"
-              pr="1.5rem"
-            >
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                2
-              </Text>
-              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
-                14:20:34
-              </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                24, Apr 2021
-              </Text>
-            </Box>
-            <Box
-              display={"flex"}
-              justifyContent="space-between"
-              pl="1.5rem"
-              pr="1.5rem"
-            >
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                3
-              </Text>
-              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
-                14:20:34
-              </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                24, Apr 2021
-              </Text>
-            </Box>
-            <Box
-              display={"flex"}
-              justifyContent="space-between"
-              pl="1.5rem"
-              pr="1.5rem"
-            >
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                4
-              </Text>
-              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
-                14:20:34
-              </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                24, Apr 2021
-              </Text>
-            </Box>
-            <Box
-              display={"flex"}
-              justifyContent="space-between"
-              pl="1.5rem"
-              pr="1.5rem"
-            >
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                5
-              </Text>
-              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
-                14:20:34
-              </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                24, Apr 2021
-              </Text>
-            </Box>
-            <Box
-              display={"flex"}
-              justifyContent="space-between"
-              pl="1.5rem"
-              pr="1.5rem"
-            >
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-                6
-              </Text>
-              <Text w="7rem" fontSize={"lg"} color="nairablue" fontWeight={400}>
-                14:20:34
-              </Text>
-              <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+              <Text
+                fontSize={{ base: "1rem", md: "lg" }}
+                color="nairablue"
+                fontWeight={400}
+                textAlign="center"
+              >
                 24, Apr 2021
               </Text>
             </Box>

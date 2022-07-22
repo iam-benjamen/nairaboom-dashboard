@@ -21,6 +21,11 @@ import { useRouter } from "next/router";
 import NextLink from "next/link";
 
 const SideNavMobile = () => {
+  const handleLinkClick = function () {
+    let Hi = document.getElementById('hi');
+    Hi.style.display = "none";
+  };
+
   const router = useRouter();
   const DashboardLink = [
     [
@@ -87,11 +92,10 @@ const SideNavMobile = () => {
     <Box
       w="100%"
       bgColor={"white"}
-      // h={"max-content"}
-      // float="left"
+      id="hi"
       display={"flex"}
       flexDir="column"
-      pl="3rem"
+      pl="1.5rem"
       pr=".5rem"
       pt="2.5rem"
       pb="9.3rem"
@@ -121,6 +125,7 @@ const SideNavMobile = () => {
               href={dashboard[1]}
               width={dashboard[4]}
               height={dashboard[5]}
+              onClick={handleLinkClick}
             />
           ) : (
             <ActiveLink
@@ -132,6 +137,7 @@ const SideNavMobile = () => {
               href={dashboard[1]}
               width={dashboard[4]}
               height={dashboard[5]}
+              onClick={handleLinkClick}
             />
           )
         )}

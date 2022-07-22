@@ -14,8 +14,7 @@ import Wrapper from "../components/Wrapper";
 
 const CashBack = () => {
   return (
-    <Wrapper
-    >
+    <Wrapper>
       <Box
         display={"flex"}
         justifyContent="space-between"
@@ -147,7 +146,7 @@ const CashBack = () => {
             <Input
               value={"Proceed"}
               border={"none"}
-              w='80%'
+              w="80%"
               color="white"
               bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
               type={"submit"}

@@ -3,24 +3,24 @@ import Image from "next/image";
 import logo from "../public/dashboard-logo.svg";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import SideNavMobile from "./sideNavMobile.js";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AppContext } from "../context/context";
 
 const NavBar = () => {
   const [monitorIcon, setMonitorIcon] = useState(true);
 
-  function openNav() {
+  const openNav = function () {
     let sideNav = document.getElementById("mySidenav");
-    sideNav.style.width = "40%";
-    // sideNav.style.minWidth = "max-content";
+    sideNav.style.width = "max-content";
     sideNav.style.height = "max-content";
     setMonitorIcon(false);
-  }
+  };
 
-  function closeNav() {
+  const closeNav = function () {
     let sideNav = document.getElementById("mySidenav");
     sideNav.style.width = 0;
     setMonitorIcon(true);
-  }
+  };
 
   return (
     <Box
@@ -28,7 +28,7 @@ const NavBar = () => {
       h="5.2rem"
       display={"flex"}
       alignItems="center"
-      px={{ base: "3rem", lg: "4.5rem" }}
+      px={{ base: "2rem", md:"3rem", lg: "4.5rem" }}
       justifyContent={{ base: "space-between", lg: "flex-start" }}
       flexDir={{ base: "row-reverse", lg: "row" }}
     >

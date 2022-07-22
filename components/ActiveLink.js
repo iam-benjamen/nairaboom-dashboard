@@ -19,6 +19,7 @@ const ActiveLink = (props) => {
         pr="1rem"
         transitionDuration={".3s"}
         _hover={{ textDecoration: "none", bg: "currentlink" }}
+        onClick={props.onClick}
       >
         <Image
           src={props.icon}

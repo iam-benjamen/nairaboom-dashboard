@@ -5,15 +5,15 @@ const Wrapper = ({ children }) => {
     <Box
       bgColor={"#F5F5F5"}
       borderRadius="2rem"
-      mt="2rem"
+      mt={{base:"1rem",md:"2rem"}}
       mb="4.8rem"
-      mr="3rem"
-      pl="3.8rem"
-      pt="2.5rem"
-      pr={{base:"2rem",lg:"4rem"}}
+      mx={{base:"auto", lg:"2.5rem"}}
+      pl={{ base: "1.5rem", md: "3.8rem" }}
+      pt={{base:"1.5rem",md:"2.5rem"}}
+      pr={{ base: "1.5rem", lg: "4rem" }}
       pb="6.3rem"
-      float="right"
-      width={{ base: "90%", lg: "68%" }}
+      float={{ base: "none", lg: "right" }}
+      width={{ base: "95%", lg: "68%" }}
       fontFamily="poppins"
     >
       {children}
