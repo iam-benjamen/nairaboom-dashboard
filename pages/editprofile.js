@@ -18,8 +18,7 @@ const EditProfile = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Wrapper
-    >
+    <Wrapper>
       <Text fontWeight={700} fontSize="1.5rem" pb="6rem">
         Edit Profile
       </Text>
@@ -154,7 +153,7 @@ const EditProfile = () => {
                   ml="6rem"
                   pb="4rem"
                   fontWeight={700}
-                  fontSize="1.5rem"
+                  fontSize={"1.5rem"}
                 >
                   Edit Profile
                 </Text>
@@ -216,8 +215,6 @@ const EditProfile = () => {
                     color="white"
                     bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
                     w="25rem"
-                    // maxW={"80%"}
-                    // float="right"
                     type="submit"
                     mt="4rem"
                     _hover={{}}

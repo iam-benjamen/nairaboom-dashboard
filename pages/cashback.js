@@ -41,22 +41,22 @@ const CashBack = () => {
         flexDir={"column"}
         justifyContent="center"
         margin={"auto"}
-        w="60%"
+        w={{base:"90%",md:"60%"}}
       >
         <Text
           lineHeight={"1.8rem"}
           color="nairablue"
           textAlign={"center"}
           fontWeight={500}
-          fontSize="1.2rem"
-          pb="4.25rem"
+          fontSize={{base:"1rem",md:"1.2rem"}}
+          pb={{base:"3rem",md:"4.25rem"}}
         >
           Wish to get cashback for your transaction? <br /> Fill the form below
         </Text>
         <form action="">
-          <Box display={"flex"} flexDir="column">
+          <Box display={"flex"} flexDir="column" w="100%">
             <Input
-              w="28rem"
+              w={{ base: "100%", md: "28rem" }}
               h="4rem"
               type={"text"}
               placeholder={"Payout to wallet"}
@@ -66,14 +66,14 @@ const CashBack = () => {
                 fontWeight: 500,
               }}
               bgColor="#EDEBEB"
-              mb="2.5rem"
+              mb={{base:"1.5rem",md:"2.5rem"}}
               focusBorderColor="none"
               border={"none"}
               readOnly
             />
             <Input
               placeholder="Amount"
-              w="28rem"
+              w={{ base: "100%", md: "28rem" }}
               h="4rem"
               border={"none"}
               bgColor="white"
@@ -83,17 +83,17 @@ const CashBack = () => {
                 color: "#A7A7A7",
                 fontWeight: 500,
               }}
-              mb="2.5rem"
+              mb={{base:"1.5rem",md:"2.5rem"}}
               focusBorderColor="nairagreen"
             />
             <Select
-              w="28rem"
+              w={{ base: "100%", md: "28rem" }}
               h="4rem"
               border={"none"}
               bgColor="white"
               placeholder="Transaction Type"
               _placeholder={{ fontWeight: 500 }}
-              mb="2.5rem"
+              mb={{base:"1.5rem",md:"2.5rem"}}
               color={"#A7A7A7"}
               focusBorderColor="nairagreen"
             >
@@ -102,7 +102,7 @@ const CashBack = () => {
             </Select>
             <Input
               placeholder="Choose Lucky Time(24hr format)"
-              w="28rem"
+              w={{ base: "100%", md: "28rem" }}
               h="4rem"
               border={"none"}
               color={"#A7A7A7"}
@@ -121,12 +121,12 @@ const CashBack = () => {
                 fontSize: "16px",
                 color: "#A7A7A7",
               }}
-              mb="2.5rem"
+              mb={{base:"1.5rem",md:"2.5rem"}}
               focusBorderColor="nairagreen"
             />
             <Input
               placeholder="Boost Code(if any)"
-              w="28rem"
+              w={{ base: "100%", md: "28rem" }}
               h="4rem"
               border={"none"}
               color={"#A7A7A7"}
@@ -152,7 +152,7 @@ const CashBack = () => {
               type={"submit"}
               fontWeight={600}
               fontSize="lg"
-              mb="4rem"
+              mb={{base:"2rem",md:"4rem"}}
               cursor={"pointer"}
             />
           </Box>

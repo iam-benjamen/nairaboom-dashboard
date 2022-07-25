@@ -12,9 +12,9 @@ const ChangePassword = () => {
         display={"flex"}
         justifyContent="space-between"
         alignItems={"center"}
-        pb="8rem"
+        pb={{base:"5rem",md:"8rem"}}
       >
-        <Text fontWeight={700} fontSize="1.5rem" color="nairablue">
+        <Text fontWeight={700} fontSize={{base:"1rem",md:"1.5rem"}} color="nairablue">
           Change Password
         </Text>
         <Box display={"flex"} alignItems="center" gap="1.6rem">
@@ -31,8 +31,8 @@ const ChangePassword = () => {
       <form action="">
         <Box
           margin={"auto"}
-          w="50%"
-          gap="3.25rem"
+          w={{base:"85%",md:"50%"}}
+          gap={{base:"2rem", md:"3.25rem"}}
           display={"flex"}
           flexDir="column"
         >
@@ -48,7 +48,7 @@ const ChangePassword = () => {
                 fontWeight: 400,
                 color: "niaragrey",
               }}
-              h="5rem"
+              h={{base:"3.5rem",md:"5rem"}}
               border={"none"}
               bgColor={"white"}
               type="text"
@@ -69,7 +69,7 @@ const ChangePassword = () => {
                 fontWeight: 400,
                 color: "niaragrey",
               }}
-              h="5rem"
+              h={{base:"3.5rem",md:"5rem"}}
               border={"none"}
               bgColor={"white"}
               type="text"
@@ -90,7 +90,7 @@ const ChangePassword = () => {
                 fontWeight: 400,
                 color: "niaragrey",
               }}
-              h="5rem"
+              h={{base:"3.5rem",md:"5rem"}}
               border={"none"}
               bgColor={"white"}
               type="text"
@@ -103,7 +103,7 @@ const ChangePassword = () => {
             color="white"
             bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
             py=".5rem"
-            mt="5rem"
+            mt={{base:"3rem", md:"5rem"}}
             _hover={{}}
           >
             Update
