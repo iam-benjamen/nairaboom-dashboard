@@ -16,7 +16,7 @@ import transaction from "../public/dashboard/transactions.svg";
 import amount from "../public/dashboard/amount.svg";
 import nairasign from "../public/dashboard/Nairasign.svg";
 import Wrapper from "../components/Wrapper";
-
+import NextLink from "next/link";
 export default function Home() {
   return (
     <Box>
@@ -38,11 +38,14 @@ export default function Home() {
             <Box as={Link} cursor="pointer">
               <Image src={notificationbell} alt="notification bell" />
             </Box>
-            <Avatar
-              name="Muhammed Cynthia"
-              src={avatar.src}
-              bg="rgba(30, 215, 96, 0.19)"
-            />
+            <Box as={NextLink} href="/editprofile">
+              <Avatar
+                name="Muhammed Cynthia"
+                src={avatar.src}
+                bg="rgba(30, 215, 96, 0.19)"
+                cursor={"pointer"}
+              />
+            </Box>
           </Box>
         </Box>
         <form action="">

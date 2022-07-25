@@ -7,12 +7,14 @@ import { useState, useContext } from "react";
 import { AppContext } from "../context/context";
 
 const NavBar = () => {
-  const [monitorIcon, setMonitorIcon] = useState(true);
+  const [monitorIcon, setMonitorIcon] = useContext(AppContext);
 
   const openNav = function () {
     let sideNav = document.getElementById("mySidenav");
+    const sidenav = document.getElementById("mobile__sidenav");
     sideNav.style.width = "max-content";
     sideNav.style.height = "max-content";
+    sidenav.style.display = "flex";
     setMonitorIcon(false);
   };
 
@@ -28,7 +30,7 @@ const NavBar = () => {
       h="5.2rem"
       display={"flex"}
       alignItems="center"
-      px={{ base: "2rem", md:"3rem", lg: "4.5rem" }}
+      px={{ base: "2rem", md: "3rem", lg: "4.5rem" }}
       justifyContent={{ base: "space-between", lg: "flex-start" }}
       flexDir={{ base: "row-reverse", lg: "row" }}
     >

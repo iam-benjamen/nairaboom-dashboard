@@ -3,36 +3,43 @@ import notificationbell from "../public/dashboard/notification.svg";
 import avatar from "../public/dashboard/avatar.svg";
 import Image from "next/image";
 import Wrapper from "../components/Wrapper";
+import NextLink from "next/link";
 
 const ChangePassword = () => {
   return (
-    <Wrapper
-    >
+    <Wrapper>
       <Box
         display={"flex"}
         justifyContent="space-between"
         alignItems={"center"}
-        pb={{base:"5rem",md:"8rem"}}
+        pb={{ base: "5rem", md: "8rem" }}
       >
-        <Text fontWeight={700} fontSize={{base:"1rem",md:"1.5rem"}} color="nairablue">
+        <Text
+          fontWeight={700}
+          fontSize={{ base: "1rem", md: "1.5rem" }}
+          color="nairablue"
+        >
           Change Password
         </Text>
         <Box display={"flex"} alignItems="center" gap="1.6rem">
           <Box as={Link} cursor="pointer">
             <Image src={notificationbell} alt="notification bell" />
           </Box>
-          <Avatar
-            name="Muhammed Cynthia"
-            src={avatar.src}
-            bg="rgba(30, 215, 96, 0.19)"
-          />
+          <Box as={NextLink} href="/editprofile">
+            <Avatar
+              name="Muhammed Cynthia"
+              src={avatar.src}
+              bg="rgba(30, 215, 96, 0.19)"
+              cursor={"pointer"}
+            />
+          </Box>
         </Box>
       </Box>
       <form action="">
         <Box
           margin={"auto"}
-          w={{base:"85%",md:"50%"}}
-          gap={{base:"2rem", md:"3.25rem"}}
+          w={{ base: "85%", md: "50%" }}
+          gap={{ base: "2rem", md: "3.25rem" }}
           display={"flex"}
           flexDir="column"
         >
@@ -48,7 +55,7 @@ const ChangePassword = () => {
                 fontWeight: 400,
                 color: "niaragrey",
               }}
-              h={{base:"3.5rem",md:"5rem"}}
+              h={{ base: "3.5rem", md: "5rem" }}
               border={"none"}
               bgColor={"white"}
               type="text"
@@ -69,7 +76,7 @@ const ChangePassword = () => {
                 fontWeight: 400,
                 color: "niaragrey",
               }}
-              h={{base:"3.5rem",md:"5rem"}}
+              h={{ base: "3.5rem", md: "5rem" }}
               border={"none"}
               bgColor={"white"}
               type="text"
@@ -90,7 +97,7 @@ const ChangePassword = () => {
                 fontWeight: 400,
                 color: "niaragrey",
               }}
-              h={{base:"3.5rem",md:"5rem"}}
+              h={{ base: "3.5rem", md: "5rem" }}
               border={"none"}
               bgColor={"white"}
               type="text"
@@ -103,7 +110,7 @@ const ChangePassword = () => {
             color="white"
             bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
             py=".5rem"
-            mt={{base:"3rem", md:"5rem"}}
+            mt={{ base: "3rem", md: "5rem" }}
             _hover={{}}
           >
             Update

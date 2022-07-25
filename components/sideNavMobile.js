@@ -19,14 +19,24 @@ import logout from "../public/sidenav/logout.png";
 import ActiveLink from "./ActiveLink";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
+import { useContext, useEffect, useRef } from "react";
+import { AppContext } from "../context/context";
+import { useOutsideClick } from "@chakra-ui/react";
 
 const SideNavMobile = () => {
-  const handleLinkClick = function () {
-    let Hi = document.getElementById('hi');
-    Hi.style.display = "none";
+  const [monitorIcon, setMonitorIcon] = useContext(AppContext);
+
+  const handleLinkClick = () => {
+    setMonitorIcon(true);
+    const sidenav = document.getElementById("mobile__sidenav");
+    sidenav.style.display = "none";
   };
 
+  //closing onclick outside
+  const ref = useRef();
+  useOutsideClick({ ref, handler:handleLinkClick });
   const router = useRouter();
+
   const DashboardLink = [
     [
       "Dashboard",
@@ -92,7 +102,7 @@ const SideNavMobile = () => {
     <Box
       w="100%"
       bgColor={"white"}
-      id="hi"
+      id="mobile__sidenav"
       display={"flex"}
       flexDir="column"
       pl="1.5rem"
@@ -101,6 +111,7 @@ const SideNavMobile = () => {
       pb="9.3rem"
       fontFamily={"poppins"}
       zIndex={999}
+      ref={ref}
     >
       <Box pb={"1.3rem"} display={"flex"} alignItems="center" gap="1.05rem">
         <Avatar
@@ -154,6 +165,7 @@ const SideNavMobile = () => {
               href={dashboard[1]}
               width={dashboard[4]}
               height={dashboard[5]}
+              onClick={handleLinkClick}
             />
           ) : (
             <ActiveLink
@@ -165,6 +177,7 @@ const SideNavMobile = () => {
               href={dashboard[1]}
               width={dashboard[4]}
               height={dashboard[5]}
+              onClick={handleLinkClick}
             />
           )
         )}
@@ -178,6 +191,7 @@ const SideNavMobile = () => {
           as={Link}
           display="flex"
           alignItems="center"
+          onClick={handleLinkClick}
         >
           <Image src={logout} alt="logout icon" />
           <Text color="#FF4B4B" fontWeight={500} fontSize="xl">

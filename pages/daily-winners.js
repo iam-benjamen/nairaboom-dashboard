@@ -20,8 +20,7 @@ import Wrapper from "../components/Wrapper";
 const DailyWinners = () => {
   const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
   return (
-    <Wrapper
-    >
+    <Wrapper>
       <Box display={"flex"} justifyContent="space-between" pb="2.25rem">
         <NextLink href={"/winnings"} passHref>
           <Box as={Link} display="flex" alignSelf={"flex-end"}>
@@ -43,20 +42,23 @@ const DailyWinners = () => {
           <Box as={Link} cursor="pointer">
             <Image src={notificationbell} alt="notification bell" />
           </Box>
-          <Avatar
-            name="Muhammed Cynthia"
-            src={avatar.src}
-            bg="rgba(30, 215, 96, 0.19)"
-          />
+          <Box as={NextLink} href="/editprofile">
+              <Avatar
+                name="Muhammed Cynthia"
+                src={avatar.src}
+                bg="rgba(30, 215, 96, 0.19)"
+                cursor={"pointer"}
+              />
+            </Box>
         </Box>
       </Box>
-      <Box pt="2rem">
+      <Box pt={{ base: "1.5rem", md: "2rem" }}>
         <Text color="nairablue" fontWeight={700} fontSize="xl">
           Daily Winners
         </Text>
       </Box>
       <Text
-        pt="2.5rem"
+        pt={{ base: "1.5rem", md: "2.5rem" }}
         pb="1.2rem"
         color="nairablue"
         fontWeight={500}
@@ -67,7 +69,7 @@ const DailyWinners = () => {
       <form action="">
         <Box
           display={"flex"}
-          w={"26.25rem"}
+          w={{ base: "100%", md: "26.25rem" }}
           h="3.8rem"
           borderRadius={"5px"}
           bgColor={"white"}
@@ -101,7 +103,7 @@ const DailyWinners = () => {
         borderRadius={"1.3rem"}
         pt={"2.8rem"}
         pb={"1rem"}
-        px="3rem"
+        px={{ base: "1rem", md: "3rem" }}
         display={"flex"}
         flexDir="column"
         fontFamily={"poppins"}
@@ -109,11 +111,7 @@ const DailyWinners = () => {
         w={"100%"}
         alignItems={"center"}
       >
-        <Text
-          fontWeight={700}
-          fontSize="1rem"
-          pb="1.875rem"
-        >
+        <Text fontWeight={700} fontSize="1rem" pb="1.875rem">
           List Of Daily Winners
         </Text>
         <Box w="100%">
@@ -127,38 +125,28 @@ const DailyWinners = () => {
             mb="1.8rem"
           >
             <Text
+              display={{ base: "none", md: "block" }}
               color="white"
               fontWeight={600}
               fontSize=".8rem"
             >
               S/N
             </Text>
-            <Text
-              color="white"
-              fontWeight={600}
-              fontSize=".8rem"
-            >
+            <Text color="white" fontWeight={600} fontSize=".8rem">
               Full Name
             </Text>
             <Text
+              display={{ base: "none", md: "block" }}
               color="white"
               fontWeight={600}
               fontSize=".8rem"
             >
               Phone Number
             </Text>
-            <Text
-              color="white"
-              fontWeight={600}
-              fontSize=".8rem"
-            >
+            <Text color="white" fontWeight={600} fontSize=".8rem">
               Amount won
             </Text>
-            <Text
-              color="white"
-              fontWeight={600}
-              fontSize=".8rem"
-            >
+            <Text color="white" fontWeight={600} fontSize=".8rem">
               Date won
             </Text>
           </Box>
@@ -173,36 +161,22 @@ const DailyWinners = () => {
                 display={"flex"}
                 justifyContent={{ base: "space-between", md: "space-evenly" }}
                 fontFamily="poppins"
+                px={{ base: "1rem", md: "0rem" }}
                 key={index}
               >
-                <Text
-                  fontSize=".75rem"
-                  color="nairablue"
-                >
+                <Text display={{ base: "none", md: "block" }} fontSize=".75rem" color="nairablue">
                   {number}
                 </Text>
-                <Text
-                  fontSize=".75rem"
-                  color="nairablue"
-                >
+                <Text fontSize=".75rem" color="nairablue">
                   Nwabueze E.
                 </Text>
-                <Text
-                  fontSize=".75rem"
-                  color="nairablue"
-                >
+                <Text display={{ base: "none", md: "block" }} fontSize=".75rem" color="nairablue">
                   *********08
                 </Text>
-                <Text
-                  fontSize=".75rem"
-                  color="nairablue"
-                >
+                <Text fontSize=".75rem" color="nairablue">
                   ₦ 3,000 Won
                 </Text>
-                <Text
-                  fontSize=".75rem"
-                  color="nairablue"
-                >
+                <Text fontSize=".75rem" color="nairablue">
                   2021-10-07
                 </Text>
               </Box>
@@ -213,7 +187,6 @@ const DailyWinners = () => {
             display={"flex"}
             justifyContent="space-evenly"
             alignItems={"center"}
-            
             flexDir={{ base: "column", md: "row" }}
             gap={{ base: "1rem", md: "0" }}
           >

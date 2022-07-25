@@ -11,26 +11,32 @@ import Wrapper from "../components/Wrapper";
 
 const Winnings = () => {
   return (
-    <Wrapper
-    >
+    <Wrapper>
       <Box
         display={"flex"}
         justifyContent="space-between"
         alignItems={"center"}
         pb="2.25rem"
       >
-        <Text fontWeight={700} fontSize="1.5rem" color="nairablue">
+        <Text
+          fontWeight={700}
+          fontSize={{ base: "1.25rem", md: "1.5rem" }}
+          color="nairablue"
+        >
           My Winnings
         </Text>
         <Box display={"flex"} alignItems="center" gap="1.6rem">
           <Box as={Link} cursor="pointer">
             <Image src={notificationbell} alt="notification bell" />
           </Box>
-          <Avatar
-            name="Muhammed Cynthia"
-            src={avatar.src}
-            bg="rgba(30, 215, 96, 0.19)"
-          />
+          <Box as={NextLink} href="/editprofile">
+            <Avatar
+              name="Muhammed Cynthia"
+              src={avatar.src}
+              bg="rgba(30, 215, 96, 0.19)"
+              cursor={"pointer"}
+            />
+          </Box>
         </Box>
       </Box>
       <form action="">
@@ -72,12 +78,13 @@ const Winnings = () => {
           bgColor={"white"}
           borderRadius="20px"
           display={"flex"}
+          flexDir={{ base: "column", md: "row" }}
           alignItems="center"
           justifyContent={"space-between"}
           pl="2rem"
           gap="1.25rem"
           w="100%"
-          py="2.5rem"
+          py={{ base: "1.5rem", md: "2.5rem" }}
           pr="2.68rem"
           boxShadow={"md"}
         >
@@ -86,10 +93,18 @@ const Winnings = () => {
               <Image src={winning} alt="total transactions" />
             </Box>
             <Box display={"flex"} flexDir="column">
-              <Text fontSize={"xl"} fontWeight={500} color={"nairagrey"}>
+              <Text
+                fontSize={{ base: "1rem", md: "xl" }}
+                fontWeight={500}
+                color={"nairagrey"}
+              >
                 Total Winnings
               </Text>
-              <Text color="nairablue" fontWeight={700} fontSize="2.75rem">
+              <Text
+                color="nairablue"
+                fontWeight={700}
+                fontSize={{ base: "2.25rem", md: "2.75rem" }}
+              >
                 06
               </Text>
             </Box>
@@ -114,25 +129,50 @@ const Winnings = () => {
               mt="1.5rem"
               boxShadow={"inner"}
               bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
-              alignSelf={"flex-end"}
+              alignSelf={{ base: "-moz-initial", md: "flex-end" }}
             >
               View Daily Winners
             </Link>
           </NextLink>
         </Box>
       </Box>
-      <Box display={"flex"} w="90%" flexDir="column" gap="2.75rem">
-        <Text color="nairablue" fontWeight={700} fontSize="1.5rem">
+      <Box
+        display={"flex"}
+        w={{ base: "100%", md: "90%" }}
+        flexDir="column"
+        gap={{ base: "1.5rem", md: "2.75rem" }}
+      >
+        <Text
+          color="nairablue"
+          fontWeight={700}
+          fontSize={{ base: "1.25rem", md: "1.5rem" }}
+        >
           My Winning History
         </Text>
-        <Box display={"flex"} justifyContent="space-between" px="1rem">
-          <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+        <Box
+          display={"flex"}
+          justifyContent="space-between"
+          px={{ base: "0rem", md: "1rem" }}
+        >
+          <Text
+            color="nairagrey"
+            fontWeight={500}
+            fontSize={{ base: "1rem", md: "1.5rem" }}
+          >
             S/N
           </Text>
-          <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+          <Text
+            color="nairagrey"
+            fontWeight={500}
+            fontSize={{ base: "1rem", md: "1.5rem" }}
+          >
             Timestamp
           </Text>
-          <Text color="nairagrey" fontWeight={500} fontSize="1.5rem">
+          <Text
+            color="nairagrey"
+            fontWeight={500}
+            fontSize={{ base: "1rem", md: "1.5rem" }}
+          >
             Amount won
           </Text>
         </Box>
@@ -140,96 +180,28 @@ const Winnings = () => {
           <Box
             display={"flex"}
             justifyContent="space-between"
-            pl="1.5rem"
-            pr="2.5rem"
+            pl={{ base: ".5rem", md: "1.5rem" }}
+            pr={{ base: ".5rem", md: "2.5rem" }}
           >
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+            <Text
+              fontSize={{ base: "1rem", md: "lg" }}
+              color="nairablue"
+              fontWeight={400}
+            >
               1
             </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+            <Text
+              fontSize={{ base: "1rem", md: "lg" }}
+              color="nairablue"
+              fontWeight={400}
+            >
               14:20:34
             </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              24, Apr 2021
-            </Text>
-          </Box>
-          <Box
-            display={"flex"}
-            justifyContent="space-between"
-            pl="1.5rem"
-            pr="2.5rem"
-          >
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              2
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              14:20:34
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              24, Apr 2021
-            </Text>
-          </Box>
-          <Box
-            display={"flex"}
-            justifyContent="space-between"
-            pl="1.5rem"
-            pr="2.5rem"
-          >
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              3
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              14:20:34
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              24, Apr 2021
-            </Text>
-          </Box>
-          <Box
-            display={"flex"}
-            justifyContent="space-between"
-            pl="1.5rem"
-            pr="2.5rem"
-          >
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              4
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              14:20:34
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              24, Apr 2021
-            </Text>
-          </Box>
-          <Box
-            display={"flex"}
-            justifyContent="space-between"
-            pl="1.5rem"
-            pr="2.5rem"
-          >
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              5
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              14:20:34
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              24, Apr 2021
-            </Text>
-          </Box>
-          <Box
-            display={"flex"}
-            justifyContent="space-between"
-            pl="1.5rem"
-            pr="2.5rem"
-          >
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              6
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
-              14:20:34
-            </Text>
-            <Text fontSize={"lg"} color="nairablue" fontWeight={400}>
+            <Text
+              fontSize={{ base: "1rem", md: "lg" }}
+              color="nairablue"
+              fontWeight={400}
+            >
               24, Apr 2021
             </Text>
           </Box>

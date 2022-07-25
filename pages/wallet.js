@@ -32,52 +32,65 @@ const Wallet = () => {
         display={"flex"}
         justifyContent="space-between"
         alignItems={"center"}
-        pb="4rem"
+        pb={{ base: "2.5rem", md: "4rem" }}
       >
-        <Text fontWeight={700} fontSize="1.5rem" color="nairablue">
+        <Text
+          fontWeight={700}
+          fontSize={{ base: "1.25rem", md: "1.5rem" }}
+          color="nairablue"
+        >
           My Wallet
         </Text>
         <Box display={"flex"} alignItems="center" gap="1.6rem">
           <Box as={Link} cursor="pointer">
             <Image src={notificationbell} alt="notification bell" />
           </Box>
-          <Avatar
-            name="Muhammed Cynthia"
-            src={avatar.src}
-            bg="rgba(30, 215, 96, 0.19)"
-          />
+          <Box as={NextLink} href="/editprofile">
+            <Avatar
+              name="Muhammed Cynthia"
+              src={avatar.src}
+              bg="rgba(30, 215, 96, 0.19)"
+              cursor={"pointer"}
+            />
+          </Box>
         </Box>
       </Box>
       <Box
         bgColor={"white"}
         borderRadius="20px"
         display={"flex"}
+        flexDir={{ base: "column", md: "row" }}
+        alignItems="center"
         justifyContent={"space-between"}
         pl="1.1rem"
-        gap="1.25rem"
+        gap={{ base: "0rem", md: "1.25rem" }}
         w="100%"
         pb=".8rem"
         pr="2rem"
-        boxShadow={"base"}
-        pt="2.5rem"
+        pt={{ base: "1.5rem", md: "2.5rem" }}
       >
-        <Box display={"flex"} pb="1.6rem" gap={"1.375rem"}>
-          <Box>
+        <Box
+          display={"flex"}
+          pb={{ base: "1rem", md: "1.6rem" }}
+          gap={"1.375rem"}
+        >
+          <Box w="100%">
             <Image src={winning} alt="winning icon" />
           </Box>
           <Box display={"flex"} flexDir="column">
             <Text fontWeight={500} color="nairagrey" fontSize={"xl"}>
               Balance
             </Text>
-            <Text color="nairablue" fontWeight={700} fontSize="2.5rem">
-              <chakra.span>
-                <Image src={nairasign} alt="nairasign" />
-              </chakra.span>
-              60,000
+            <Text
+              color="nairablue"
+              fontWeight={700}
+              fontSize={{ base: "2rem", md: "2.5rem" }}
+            >
+              &#8358;60,000
             </Text>
           </Box>
         </Box>
-        <Box display={"flex"} alignItems="flex-end" gap="1.7rem">
+        <Box display={"flex"} alignItems="flex-end" gap="1.7rem" maxW={"90%"}>
           <NextLink href="/daily-winners" passHref>
             <Link
               fontWeight={600}
@@ -126,10 +139,20 @@ const Wallet = () => {
         </Box>
       </Box>
       <Box pt="3.3rem" fontFamily={"poppins"}>
-        <Heading fontWeight={700} color="nairablue" fontFamily={"poppins"}>
+        <Heading
+          fontWeight={700}
+          fontSize={{ base: "1.25rem", md: "1.875rem" }}
+          color="nairablue"
+          fontFamily={"poppins"}
+        >
           Transaction History
         </Heading>
-        <Box display={"flex"} w="70%" mt="1.5rem" gap="2.4rem">
+        <Box
+          display={"flex"}
+          w={{ base: "100%", md: "70%" }}
+          mt="1.5rem"
+          gap="2.4rem"
+        >
           <Box
             h="2.6rem"
             w={{ base: "90%", md: "9.3rem" }}
@@ -162,14 +185,18 @@ const Wallet = () => {
             <Input
               border={"none"}
               type="search"
+              px={".5rem"}
               focusBorderColor="transparent"
               placeholder="Search"
-              _placeholder={{ fontSize: ".6rem", ml: "2rem" }}
+              _placeholder={{
+                fontSize: ".6rem",
+                ml: { base: "1.5rem", md: "2rem" },
+              }}
               h="100%"
             />
           </Box>
         </Box>
-        <Box w="75%" mt="2.4rem" fontFamily={"poppins"}>
+        <Box w={{ base: "100%", md: "75%" }} mt="2.4rem" fontFamily={"poppins"}>
           <Tabs isFitted variant="unstyled">
             <TabList
               border="1px solid #DCDADA"

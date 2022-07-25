@@ -11,7 +11,7 @@ import Image from "next/image";
 import avatar from "../public/dashboard/avatar.svg";
 import notificationbell from "../public/dashboard/notification.svg";
 import Wrapper from "../components/Wrapper";
-
+import NextLink from "next/link"
 const CashBack = () => {
   return (
     <Wrapper>
@@ -21,18 +21,25 @@ const CashBack = () => {
         alignItems={"center"}
         pb="2.25rem"
       >
-        <Text fontWeight={700} fontSize="1.5rem" color="nairablue">
+        <Text
+          fontWeight={700}
+          fontSize={{ base: "1.25rem", md: "1.5rem" }}
+          color="nairablue"
+        >
           Get Cashback
         </Text>
         <Box display={"flex"} alignItems="center" gap="1.6rem">
           <Box as={Link} cursor="pointer">
             <Image src={notificationbell} alt="notification bell" />
           </Box>
-          <Avatar
-            name="Muhammed Cynthia"
-            src={avatar.src}
-            bg="rgba(30, 215, 96, 0.19)"
-          />
+          <Box as={NextLink} href="/editprofile">
+            <Avatar
+              name="Muhammed Cynthia"
+              src={avatar.src}
+              bg="rgba(30, 215, 96, 0.19)"
+              cursor={"pointer"}
+            />
+          </Box>
         </Box>
       </Box>
       <Box
@@ -41,15 +48,15 @@ const CashBack = () => {
         flexDir={"column"}
         justifyContent="center"
         margin={"auto"}
-        w={{base:"90%",md:"60%"}}
+        w={{ base: "90%", md: "60%" }}
       >
         <Text
           lineHeight={"1.8rem"}
           color="nairablue"
           textAlign={"center"}
           fontWeight={500}
-          fontSize={{base:"1rem",md:"1.2rem"}}
-          pb={{base:"3rem",md:"4.25rem"}}
+          fontSize={{ base: "1rem", md: "1.2rem" }}
+          pb={{ base: "3rem", md: "4.25rem" }}
         >
           Wish to get cashback for your transaction? <br /> Fill the form below
         </Text>
@@ -66,7 +73,7 @@ const CashBack = () => {
                 fontWeight: 500,
               }}
               bgColor="#EDEBEB"
-              mb={{base:"1.5rem",md:"2.5rem"}}
+              mb={{ base: "1.5rem", md: "2.5rem" }}
               focusBorderColor="none"
               border={"none"}
               readOnly
@@ -83,7 +90,7 @@ const CashBack = () => {
                 color: "#A7A7A7",
                 fontWeight: 500,
               }}
-              mb={{base:"1.5rem",md:"2.5rem"}}
+              mb={{ base: "1.5rem", md: "2.5rem" }}
               focusBorderColor="nairagreen"
             />
             <Select
@@ -93,7 +100,7 @@ const CashBack = () => {
               bgColor="white"
               placeholder="Transaction Type"
               _placeholder={{ fontWeight: 500 }}
-              mb={{base:"1.5rem",md:"2.5rem"}}
+              mb={{ base: "1.5rem", md: "2.5rem" }}
               color={"#A7A7A7"}
               focusBorderColor="nairagreen"
             >
@@ -121,7 +128,7 @@ const CashBack = () => {
                 fontSize: "16px",
                 color: "#A7A7A7",
               }}
-              mb={{base:"1.5rem",md:"2.5rem"}}
+              mb={{ base: "1.5rem", md: "2.5rem" }}
               focusBorderColor="nairagreen"
             />
             <Input
@@ -152,7 +159,7 @@ const CashBack = () => {
               type={"submit"}
               fontWeight={600}
               fontSize="lg"
-              mb={{base:"2rem",md:"4rem"}}
+              mb={{ base: "2rem", md: "4rem" }}
               cursor={"pointer"}
             />
           </Box>

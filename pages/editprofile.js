@@ -19,20 +19,30 @@ const EditProfile = () => {
 
   return (
     <Wrapper>
-      <Text fontWeight={700} fontSize="1.5rem" pb="6rem">
+      <Text
+        fontWeight={700}
+        fontSize={{ base: "1.25rem", md: "1.5rem" }}
+        pb={{ base: "3rem", md: "6rem" }}
+      >
         Edit Profile
       </Text>
-      <Box display={"flex"} flexDir="column" pl="9rem">
+      <Box
+        display={"flex"}
+        flexDir="column"
+        pl={{ base: "2rem", md: "7rem" }}
+        maxW="90%"
+      >
         <Box gap="2.125rem" display={"flex"} alignItems="center">
           <Avatar
             src={avatar.src}
             name="Muhammed Cynthia"
             bg="rgba(30, 215, 96, 0.19)"
-            size={"14rem"}
+            size={{ base: "2xl", md: "14rem" }}
           />
           <Text
             fontWeight={500}
-            fontSize="xl"
+            fontSize={{ base: "1rem", md: "xl" }}
+            w="max-content"
             color="nairablue"
             position={"relative"}
             textDecor="underline"
@@ -65,49 +75,62 @@ const EditProfile = () => {
           Personal Biodata
         </Text>
 
-        <Box w="80%">
+        <Box w={{ base: "100%", md: "90%" }}>
           <Box
             display={"flex"}
-            // justifyContent="space-between"
-            gap="9.125rem"
+            justifyContent="space-between"
             alignItems={"center"}
           >
             <Text fontWeight={500} color="nairagrey" fontSize={"1rem"}>
               Full Name
             </Text>
-            <Text fontWeight={500} color="nairagrey" fontSize={"1.2rem"}>
+            <Text
+              fontWeight={500}
+              color="nairagrey"
+              fontSize={{ base: "1rem", md: "1.2rem" }}
+            >
               Muhammed Cynthia
             </Text>
           </Box>
           <Box h="4px" mt=".8rem" bgColor="white" borderRadius={"4px"}></Box>
         </Box>
-        <Box w="80%" pt="2.35rem">
+
+        <Box w={{ base: "100%", md: "90%" }} pt="2.35rem">
           <Box
             display={"flex"}
-            // justifyContent="space-between"
-            gap="6.8125rem"
+            justifyContent="space-between"
             alignItems={"center"}
           >
             <Text fontWeight={500} color="nairagrey" fontSize={"1rem"}>
               Phone Number
             </Text>
-            <Text fontWeight={500} color="nairagrey" fontSize={"1.2rem"}>
+            <Text
+              fontWeight={500}
+              color="nairagrey"
+              fontSize={{ base: "1rem", md: "1.2rem" }}
+            >
               +234-8094647438
             </Text>
           </Box>
           <Box h="4px" mt=".8rem" bgColor="white" borderRadius={"4px"}></Box>
         </Box>
-        <Box w="80%" pt="2.35rem">
+
+        <Box w={{ base: "100%", md: "90%" }} pt="2.35rem">
           <Box
             display={"flex"}
-            // justifyContent="space-between"
-            gap="11.25rem"
+            justifyContent="space-between"
             alignItems={"center"}
           >
             <Text fontWeight={500} color="nairagrey" fontSize={"1rem"}>
               Email
             </Text>
-            <Text fontWeight={500} color="nairagrey" fontSize={"1.2rem"}>
+            <Text
+              fontWeight={500}
+              color="nairagrey"
+              fontSize={{ base: "1rem", md: "1.2rem" }}
+              maxW={{ base: "13rem", md: "fit-content" }}
+              wordBreak="break-all"
+            >
               Muhammedcynthia@gmail.com
             </Text>
           </Box>
@@ -115,8 +138,9 @@ const EditProfile = () => {
         <Button
           color="white"
           bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
-          mt="6.825rem"
+          mt={{ base: "5rem", md: "6.825rem" }}
           w="26.8rem"
+          maxW={"90%"}
           h="3rem"
           alignSelf={"flex-start"}
           onClick={onOpen}
@@ -137,9 +161,13 @@ const EditProfile = () => {
             pt="3.37rem"
             pb="3.8rem"
             h="max-content"
-            w="60%"
+            w={{ base: "90%", md: "60%" }}
           >
-            <ModalCloseButton mt="3.37rem" mr="3.5rem" colorScheme={"red"} />
+            <ModalCloseButton
+              mt="3.37rem"
+              mr={{ base: ".5rem", md: "3.5rem" }}
+              colorScheme={"red"}
+            />
             <ModalBody>
               <Box
                 display={"flex"}
@@ -150,17 +178,17 @@ const EditProfile = () => {
               >
                 <Text
                   alignSelf={"flex-start"}
-                  ml="6rem"
+                  ml={{ base: "2erem", md: "6rem" }}
                   pb="4rem"
                   fontWeight={700}
-                  fontSize={"1.5rem"}
+                  fontSize={{ base: "1rem", md: "1.5rem" }}
                 >
                   Edit Profile
                 </Text>
                 <form action="">
                   <Box
                     alignItems={"center"}
-                    w="21rem"
+                    w={{ base: "max-content", md: "21rem" }}
                     gap="2.3rem"
                     display={"flex"}
                     flexDir="column"
@@ -214,7 +242,7 @@ const EditProfile = () => {
                   <Button
                     color="white"
                     bgGradient="linear(180deg, #02D95A 0%, #02B54C 100%)"
-                    w="25rem"
+                    w={{ base: "90%", md: "25rem" }}
                     type="submit"
                     mt="4rem"
                     _hover={{}}
